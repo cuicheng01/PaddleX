@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://paddlepaddle.github.io/PaddleX/3.0/en/pipeline_deploy/edge_deploy.html">
+        <link rel="canonical" href="https://paddlepaddle.github.io/PaddleX/3.0/en/VisualDL.html">
       
       
-        <link rel="prev" href="serving.html">
+        <link rel="prev" href="practical_tutorials/deployment_tutorial.html">
       
       
-        <link rel="next" href="paddle2onnx.html">
+        <link rel="next" href="FAQ.html">
       
       
-      <link rel="icon" href="../../assets/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
-        <title>Edge Deployment - PaddleX Documentation</title>
+        <title>VisualDL - PaddleX Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#paddlex-edge-deployment-demo-usage-guide" class="md-skip">
+        <a href="#introduction-to-visualdl" class="md-skip">
           Skip to content
         </a>
       
@@ -103,12 +103,12 @@
             <div class="md-banner__inner md-grid md-typeset">
               
 You're not viewing the latest version.
-<a href="../../..">
+<a href="../..">
     <strong>Click here to go to latest.</strong>
 </a>
 
             </div>
-            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL("../.."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),base=new URL(".."),outdated=__md_get("__outdated",sessionStorage,base);!0===outdated&&el&&(el.hidden=!1)</script>
           </aside>
         
       </div>
@@ -120,7 +120,7 @@ You're not viewing the latest version.
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../index.html" title="PaddleX Documentation" class="md-header__button md-logo" aria-label="PaddleX Documentation" data-md-component="logo">
+    <a href="index.html" title="PaddleX Documentation" class="md-header__button md-logo" aria-label="PaddleX Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -145,7 +145,7 @@ You're not viewing the latest version.
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Edge Deployment
+              VisualDL
             
           </span>
         </div>
@@ -192,13 +192,13 @@ You're not viewing the latest version.
       <ul class="md-select__list">
         
           <li class="md-select__item">
-            <a href="../../pipeline_deploy/edge_deploy.html" hreflang="zh" class="md-select__link">
+            <a href="../VisualDL.html" hreflang="zh" class="md-select__link">
               简体中文
             </a>
           </li>
         
           <li class="md-select__item">
-            <a href="edge_deploy.html" hreflang="en" class="md-select__link">
+            <a href="VisualDL.html" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -283,7 +283,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../index.html" class="md-tabs__link">
+      <a href="index.html" class="md-tabs__link">
         
   
   
@@ -304,7 +304,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../installation/paddlepaddle_install.html" class="md-tabs__link">
+        <a href="installation/paddlepaddle_install.html" class="md-tabs__link">
           
   
   
@@ -326,7 +326,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../pipeline_usage/pipeline_develop_guide.html" class="md-tabs__link">
+        <a href="pipeline_usage/pipeline_develop_guide.html" class="md-tabs__link">
           
   
   
@@ -355,7 +355,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../module_usage/tutorials/ocr_modules/text_detection.html" class="md-tabs__link">
+        <a href="module_usage/tutorials/ocr_modules/text_detection.html" class="md-tabs__link">
           
   
   
@@ -376,13 +376,11 @@ You're not viewing the latest version.
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="high_performance_inference.html" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="pipeline_deploy/high_performance_inference.html" class="md-tabs__link">
           
   
   
@@ -404,7 +402,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../other_devices_support/multi_devices_use_guide.html" class="md-tabs__link">
+        <a href="other_devices_support/multi_devices_use_guide.html" class="md-tabs__link">
           
   
   
@@ -433,7 +431,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../data_annotations/cv_modules/image_classification.html" class="md-tabs__link">
+        <a href="data_annotations/cv_modules/image_classification.html" class="md-tabs__link">
           
   
   
@@ -458,7 +456,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../support_list/pipelines_list.html" class="md-tabs__link">
+        <a href="support_list/pipelines_list.html" class="md-tabs__link">
           
   
   
@@ -480,7 +478,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../support_list/models_list.html" class="md-tabs__link">
+        <a href="support_list/models_list.html" class="md-tabs__link">
           
   
   
@@ -502,7 +500,7 @@ You're not viewing the latest version.
     
     
       <li class="md-tabs__item">
-        <a href="../practical_tutorials/document_scene_information_extraction%28layout_detection%29_tutorial.html" class="md-tabs__link">
+        <a href="practical_tutorials/document_scene_information_extraction%28layout_detection%29_tutorial.html" class="md-tabs__link">
           
   
   
@@ -520,9 +518,30 @@ You're not viewing the latest version.
   
   
   
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="VisualDL.html" class="md-tabs__link">
+        
+  
+  
+    
+  
+  VisualDL
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
   
     <li class="md-tabs__item">
-      <a href="../FAQ.html" class="md-tabs__link">
+      <a href="FAQ.html" class="md-tabs__link">
         
   
   
@@ -541,7 +560,7 @@ You're not viewing the latest version.
   
   
     <li class="md-tabs__item">
-      <a href="../CHANGELOG.html" class="md-tabs__link">
+      <a href="CHANGELOG.html" class="md-tabs__link">
         
   
   
@@ -582,7 +601,7 @@ You're not viewing the latest version.
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../index.html" title="PaddleX Documentation" class="md-nav__button md-logo" aria-label="PaddleX Documentation" data-md-component="logo">
+    <a href="index.html" title="PaddleX Documentation" class="md-nav__button md-logo" aria-label="PaddleX Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -617,7 +636,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../index.html" class="md-nav__link">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -690,7 +709,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../installation/paddlepaddle_install.html" class="md-nav__link">
+      <a href="installation/paddlepaddle_install.html" class="md-nav__link">
         
   
   
@@ -713,7 +732,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../installation/installation.html" class="md-nav__link">
+      <a href="installation/installation.html" class="md-nav__link">
         
   
   
@@ -808,7 +827,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/pipeline_develop_guide.html" class="md-nav__link">
+      <a href="pipeline_usage/pipeline_develop_guide.html" class="md-nav__link">
         
   
   
@@ -882,7 +901,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/information_extraction_pipelines/document_scene_information_extraction_v3.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/information_extraction_pipelines/document_scene_information_extraction_v3.html" class="md-nav__link">
         
   
   
@@ -905,7 +924,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/information_extraction_pipelines/document_scene_information_extraction_v4.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/information_extraction_pipelines/document_scene_information_extraction_v4.html" class="md-nav__link">
         
   
   
@@ -999,7 +1018,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/ocr_pipelines/OCR.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/ocr_pipelines/OCR.html" class="md-nav__link">
         
   
   
@@ -1022,7 +1041,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/ocr_pipelines/table_recognition.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/ocr_pipelines/table_recognition.html" class="md-nav__link">
         
   
   
@@ -1045,7 +1064,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/ocr_pipelines/table_recognition_v2.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/ocr_pipelines/table_recognition_v2.html" class="md-nav__link">
         
   
   
@@ -1068,7 +1087,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/ocr_pipelines/layout_parsing.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/ocr_pipelines/layout_parsing.html" class="md-nav__link">
         
   
   
@@ -1091,7 +1110,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/ocr_pipelines/PP-StructureV3.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/ocr_pipelines/PP-StructureV3.html" class="md-nav__link">
         
   
   
@@ -1114,7 +1133,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/ocr_pipelines/formula_recognition.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/ocr_pipelines/formula_recognition.html" class="md-nav__link">
         
   
   
@@ -1137,7 +1156,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/ocr_pipelines/seal_recognition.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/ocr_pipelines/seal_recognition.html" class="md-nav__link">
         
   
   
@@ -1160,7 +1179,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/ocr_pipelines/doc_preprocessor.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/ocr_pipelines/doc_preprocessor.html" class="md-nav__link">
         
   
   
@@ -1270,7 +1289,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/image_classification.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/image_classification.html" class="md-nav__link">
         
   
   
@@ -1293,7 +1312,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/object_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/object_detection.html" class="md-nav__link">
         
   
   
@@ -1316,7 +1335,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/instance_segmentation.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/instance_segmentation.html" class="md-nav__link">
         
   
   
@@ -1339,7 +1358,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/semantic_segmentation.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/semantic_segmentation.html" class="md-nav__link">
         
   
   
@@ -1362,7 +1381,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/image_multi_label_classification.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/image_multi_label_classification.html" class="md-nav__link">
         
   
   
@@ -1385,7 +1404,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/small_object_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/small_object_detection.html" class="md-nav__link">
         
   
   
@@ -1408,7 +1427,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/image_anomaly_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/image_anomaly_detection.html" class="md-nav__link">
         
   
   
@@ -1431,7 +1450,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/3d_bev_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/3d_bev_detection.html" class="md-nav__link">
         
   
   
@@ -1454,7 +1473,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/human_keypoint_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/human_keypoint_detection.html" class="md-nav__link">
         
   
   
@@ -1477,7 +1496,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/open_vocabulary_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/open_vocabulary_detection.html" class="md-nav__link">
         
   
   
@@ -1500,7 +1519,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/open_vocabulary_segmentation.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/open_vocabulary_segmentation.html" class="md-nav__link">
         
   
   
@@ -1523,7 +1542,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/rotated_object_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/rotated_object_detection.html" class="md-nav__link">
         
   
   
@@ -1546,7 +1565,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/general_image_recognition.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/general_image_recognition.html" class="md-nav__link">
         
   
   
@@ -1569,7 +1588,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/pedestrian_attribute_recognition.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/pedestrian_attribute_recognition.html" class="md-nav__link">
         
   
   
@@ -1592,7 +1611,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/vehicle_attribute_recognition.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/vehicle_attribute_recognition.html" class="md-nav__link">
         
   
   
@@ -1615,7 +1634,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/cv_pipelines/face_recognition.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/cv_pipelines/face_recognition.html" class="md-nav__link">
         
   
   
@@ -1699,7 +1718,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/time_series_pipelines/time_series_forecasting.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/time_series_pipelines/time_series_forecasting.html" class="md-nav__link">
         
   
   
@@ -1722,7 +1741,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/time_series_pipelines/time_series_anomaly_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/time_series_pipelines/time_series_anomaly_detection.html" class="md-nav__link">
         
   
   
@@ -1745,7 +1764,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/time_series_pipelines/time_series_classification.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/time_series_pipelines/time_series_classification.html" class="md-nav__link">
         
   
   
@@ -1825,7 +1844,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/speech_pipelines/multilingual_speech_recognition.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/speech_pipelines/multilingual_speech_recognition.html" class="md-nav__link">
         
   
   
@@ -1907,7 +1926,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/video_pipelines/video_classification.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/video_pipelines/video_classification.html" class="md-nav__link">
         
   
   
@@ -1930,7 +1949,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/video_pipelines/video_detection.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/video_pipelines/video_detection.html" class="md-nav__link">
         
   
   
@@ -2010,7 +2029,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/tutorials/vlm_pipelines/doc_understanding.html" class="md-nav__link">
+      <a href="pipeline_usage/tutorials/vlm_pipelines/doc_understanding.html" class="md-nav__link">
         
   
   
@@ -2094,7 +2113,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/instructions/pipeline_CLI_usage.html" class="md-nav__link">
+      <a href="pipeline_usage/instructions/pipeline_CLI_usage.html" class="md-nav__link">
         
   
   
@@ -2117,7 +2136,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/instructions/pipeline_python_API.html" class="md-nav__link">
+      <a href="pipeline_usage/instructions/pipeline_python_API.html" class="md-nav__link">
         
   
   
@@ -2140,7 +2159,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../pipeline_usage/instructions/parallel_inference.html" class="md-nav__link">
+      <a href="pipeline_usage/instructions/parallel_inference.html" class="md-nav__link">
         
   
   
@@ -2314,7 +2333,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/text_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/text_detection.html" class="md-nav__link">
         
   
   
@@ -2337,7 +2356,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/seal_text_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/seal_text_detection.html" class="md-nav__link">
         
   
   
@@ -2360,7 +2379,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/text_recognition.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/text_recognition.html" class="md-nav__link">
         
   
   
@@ -2383,7 +2402,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/layout_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/layout_detection.html" class="md-nav__link">
         
   
   
@@ -2406,7 +2425,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/table_structure_recognition.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/table_structure_recognition.html" class="md-nav__link">
         
   
   
@@ -2429,7 +2448,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/table_cells_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/table_cells_detection.html" class="md-nav__link">
         
   
   
@@ -2452,7 +2471,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/table_classification.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/table_classification.html" class="md-nav__link">
         
   
   
@@ -2475,7 +2494,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/doc_img_orientation_classification.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/doc_img_orientation_classification.html" class="md-nav__link">
         
   
   
@@ -2498,7 +2517,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/text_image_unwarping.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/text_image_unwarping.html" class="md-nav__link">
         
   
   
@@ -2521,7 +2540,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/textline_orientation_classification.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/textline_orientation_classification.html" class="md-nav__link">
         
   
   
@@ -2544,7 +2563,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/ocr_modules/formula_recognition.html" class="md-nav__link">
+      <a href="module_usage/tutorials/ocr_modules/formula_recognition.html" class="md-nav__link">
         
   
   
@@ -2630,7 +2649,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/image_classification.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/image_classification.html" class="md-nav__link">
         
   
   
@@ -2653,7 +2672,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/image_multilabel_classification.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/image_multilabel_classification.html" class="md-nav__link">
         
   
   
@@ -2676,7 +2695,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/pedestrian_attribute_recognition.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/pedestrian_attribute_recognition.html" class="md-nav__link">
         
   
   
@@ -2699,7 +2718,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/vehicle_attribute_recognition.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/vehicle_attribute_recognition.html" class="md-nav__link">
         
   
   
@@ -2781,7 +2800,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/image_feature.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/image_feature.html" class="md-nav__link">
         
   
   
@@ -2804,7 +2823,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/face_feature.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/face_feature.html" class="md-nav__link">
         
   
   
@@ -2898,7 +2917,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/object_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/object_detection.html" class="md-nav__link">
         
   
   
@@ -2921,7 +2940,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/small_object_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/small_object_detection.html" class="md-nav__link">
         
   
   
@@ -2944,7 +2963,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/face_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/face_detection.html" class="md-nav__link">
         
   
   
@@ -2967,7 +2986,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/mainbody_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/mainbody_detection.html" class="md-nav__link">
         
   
   
@@ -2990,7 +3009,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/human_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/human_detection.html" class="md-nav__link">
         
   
   
@@ -3013,7 +3032,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/vehicle_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/vehicle_detection.html" class="md-nav__link">
         
   
   
@@ -3036,7 +3055,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/human_keypoint_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/human_keypoint_detection.html" class="md-nav__link">
         
   
   
@@ -3059,7 +3078,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/open_vocabulary_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/open_vocabulary_detection.html" class="md-nav__link">
         
   
   
@@ -3145,7 +3164,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/semantic_segmentation.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/semantic_segmentation.html" class="md-nav__link">
         
   
   
@@ -3168,7 +3187,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/instance_segmentation.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/instance_segmentation.html" class="md-nav__link">
         
   
   
@@ -3191,7 +3210,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/anomaly_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/anomaly_detection.html" class="md-nav__link">
         
   
   
@@ -3214,7 +3233,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/open_vocabulary_segmentation.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/open_vocabulary_segmentation.html" class="md-nav__link">
         
   
   
@@ -3298,7 +3317,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/time_series_modules/time_series_forecasting.html" class="md-nav__link">
+      <a href="module_usage/tutorials/time_series_modules/time_series_forecasting.html" class="md-nav__link">
         
   
   
@@ -3321,7 +3340,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/time_series_modules/time_series_anomaly_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/time_series_modules/time_series_anomaly_detection.html" class="md-nav__link">
         
   
   
@@ -3344,7 +3363,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/time_series_modules/time_series_classification.html" class="md-nav__link">
+      <a href="module_usage/tutorials/time_series_modules/time_series_classification.html" class="md-nav__link">
         
   
   
@@ -3424,7 +3443,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/speech_modules/multilingual_speech_recognition.html" class="md-nav__link">
+      <a href="module_usage/tutorials/speech_modules/multilingual_speech_recognition.html" class="md-nav__link">
         
   
   
@@ -3504,7 +3523,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/cv_modules/3d_bev_detection.html" class="md-nav__link">
+      <a href="module_usage/tutorials/cv_modules/3d_bev_detection.html" class="md-nav__link">
         
   
   
@@ -3586,7 +3605,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/vlm_modules/doc_vlm.html" class="md-nav__link">
+      <a href="module_usage/tutorials/vlm_modules/doc_vlm.html" class="md-nav__link">
         
   
   
@@ -3609,7 +3628,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/tutorials/vlm_modules/chart_parsing.html" class="md-nav__link">
+      <a href="module_usage/tutorials/vlm_modules/chart_parsing.html" class="md-nav__link">
         
   
   
@@ -3695,7 +3714,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/instructions/model_python_API.html" class="md-nav__link">
+      <a href="module_usage/instructions/model_python_API.html" class="md-nav__link">
         
   
   
@@ -3718,7 +3737,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/instructions/config_parameters_common.html" class="md-nav__link">
+      <a href="module_usage/instructions/config_parameters_common.html" class="md-nav__link">
         
   
   
@@ -3741,7 +3760,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/instructions/config_parameters_time_series.html" class="md-nav__link">
+      <a href="module_usage/instructions/config_parameters_time_series.html" class="md-nav__link">
         
   
   
@@ -3764,7 +3783,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../module_usage/instructions/benchmark.html" class="md-nav__link">
+      <a href="module_usage/instructions/benchmark.html" class="md-nav__link">
         
   
   
@@ -3799,10 +3818,8 @@ You're not viewing the latest version.
       
   
   
-    
   
   
-  
     
     
       
@@ -3818,22 +3835,21 @@ You're not viewing the latest version.
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -3846,7 +3862,7 @@ You're not viewing the latest version.
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Pipeline Deploy
@@ -3860,7 +3876,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="high_performance_inference.html" class="md-nav__link">
+      <a href="pipeline_deploy/high_performance_inference.html" class="md-nav__link">
         
   
   
@@ -3883,7 +3899,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="serving.html" class="md-nav__link">
+      <a href="pipeline_deploy/serving.html" class="md-nav__link">
         
   
   
@@ -3903,122 +3919,20 @@ You're not viewing the latest version.
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Edge Deployment
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="edge_deploy.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="pipeline_deploy/on_device_deployment.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Edge Deployment
+    On-Device Deployment
     
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation-process-and-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation Process and Usage
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation Process and Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#environment-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Environment Preparation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#material-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Material Preparation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deployment-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deployment Steps
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reference-materials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference Materials
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feedback-section" class="md-nav__link">
-    <span class="md-ellipsis">
-      Feedback Section
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4031,12 +3945,12 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="paddle2onnx.html" class="md-nav__link">
+      <a href="pipeline_deploy/paddle2onnx.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    获取 ONNX 模型
+    Obtaining ONNX Models
     
   </span>
   
@@ -4112,7 +4026,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/multi_devices_use_guide.html" class="md-nav__link">
+      <a href="other_devices_support/multi_devices_use_guide.html" class="md-nav__link">
         
   
   
@@ -4192,7 +4106,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_DCU.html" class="md-nav__link">
+      <a href="other_devices_support/paddlepaddle_install_DCU.html" class="md-nav__link">
         
   
   
@@ -4215,7 +4129,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_MLU.html" class="md-nav__link">
+      <a href="other_devices_support/paddlepaddle_install_MLU.html" class="md-nav__link">
         
   
   
@@ -4238,7 +4152,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_NPU.html" class="md-nav__link">
+      <a href="other_devices_support/paddlepaddle_install_NPU.html" class="md-nav__link">
         
   
   
@@ -4261,7 +4175,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_XPU.html" class="md-nav__link">
+      <a href="other_devices_support/paddlepaddle_install_XPU.html" class="md-nav__link">
         
   
   
@@ -4284,7 +4198,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../other_devices_support/paddlepaddle_install_GCU.html" class="md-nav__link">
+      <a href="other_devices_support/paddlepaddle_install_GCU.html" class="md-nav__link">
         
   
   
@@ -4434,7 +4348,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/cv_modules/image_classification.html" class="md-nav__link">
+      <a href="data_annotations/cv_modules/image_classification.html" class="md-nav__link">
         
   
   
@@ -4457,7 +4371,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/cv_modules/image_feature.html" class="md-nav__link">
+      <a href="data_annotations/cv_modules/image_feature.html" class="md-nav__link">
         
   
   
@@ -4480,7 +4394,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/cv_modules/instance_segmentation.html" class="md-nav__link">
+      <a href="data_annotations/cv_modules/instance_segmentation.html" class="md-nav__link">
         
   
   
@@ -4503,7 +4417,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/cv_modules/ml_classification.html" class="md-nav__link">
+      <a href="data_annotations/cv_modules/ml_classification.html" class="md-nav__link">
         
   
   
@@ -4526,7 +4440,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/cv_modules/object_detection.html" class="md-nav__link">
+      <a href="data_annotations/cv_modules/object_detection.html" class="md-nav__link">
         
   
   
@@ -4549,7 +4463,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/cv_modules/semantic_segmentation.html" class="md-nav__link">
+      <a href="data_annotations/cv_modules/semantic_segmentation.html" class="md-nav__link">
         
   
   
@@ -4631,7 +4545,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/ocr_modules/table_recognition.html" class="md-nav__link">
+      <a href="data_annotations/ocr_modules/table_recognition.html" class="md-nav__link">
         
   
   
@@ -4654,7 +4568,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/ocr_modules/text_detection_recognition.html" class="md-nav__link">
+      <a href="data_annotations/ocr_modules/text_detection_recognition.html" class="md-nav__link">
         
   
   
@@ -4738,7 +4652,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/time_series_modules/time_series_anomaly_detection.html" class="md-nav__link">
+      <a href="data_annotations/time_series_modules/time_series_anomaly_detection.html" class="md-nav__link">
         
   
   
@@ -4761,7 +4675,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/time_series_modules/time_series_classification.html" class="md-nav__link">
+      <a href="data_annotations/time_series_modules/time_series_classification.html" class="md-nav__link">
         
   
   
@@ -4784,7 +4698,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../data_annotations/time_series_modules/time_series_forecasting.html" class="md-nav__link">
+      <a href="data_annotations/time_series_modules/time_series_forecasting.html" class="md-nav__link">
         
   
   
@@ -4879,7 +4793,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/pipelines_list.html" class="md-nav__link">
+      <a href="support_list/pipelines_list.html" class="md-nav__link">
         
   
   
@@ -4902,7 +4816,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/pipelines_list_dcu.html" class="md-nav__link">
+      <a href="support_list/pipelines_list_dcu.html" class="md-nav__link">
         
   
   
@@ -4925,7 +4839,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/pipelines_list_mlu.html" class="md-nav__link">
+      <a href="support_list/pipelines_list_mlu.html" class="md-nav__link">
         
   
   
@@ -4948,7 +4862,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/pipelines_list_npu.html" class="md-nav__link">
+      <a href="support_list/pipelines_list_npu.html" class="md-nav__link">
         
   
   
@@ -4971,7 +4885,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/pipelines_list_xpu.html" class="md-nav__link">
+      <a href="support_list/pipelines_list_xpu.html" class="md-nav__link">
         
   
   
@@ -5060,7 +4974,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/models_list.html" class="md-nav__link">
+      <a href="support_list/models_list.html" class="md-nav__link">
         
   
   
@@ -5083,7 +4997,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/model_list_dcu.html" class="md-nav__link">
+      <a href="support_list/model_list_dcu.html" class="md-nav__link">
         
   
   
@@ -5106,7 +5020,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/model_list_mlu.html" class="md-nav__link">
+      <a href="support_list/model_list_mlu.html" class="md-nav__link">
         
   
   
@@ -5129,7 +5043,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/model_list_npu.html" class="md-nav__link">
+      <a href="support_list/model_list_npu.html" class="md-nav__link">
         
   
   
@@ -5152,7 +5066,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/model_list_xpu.html" class="md-nav__link">
+      <a href="support_list/model_list_xpu.html" class="md-nav__link">
         
   
   
@@ -5175,7 +5089,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../support_list/model_list_gcu.html" class="md-nav__link">
+      <a href="support_list/model_list_gcu.html" class="md-nav__link">
         
   
   
@@ -5288,7 +5202,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/document_scene_information_extraction%28layout_detection%29_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/document_scene_information_extraction%28layout_detection%29_tutorial.html" class="md-nav__link">
         
   
   
@@ -5311,7 +5225,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/document_scene_information_extraction%28seal_recognition%29_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/document_scene_information_extraction%28seal_recognition%29_tutorial.html" class="md-nav__link">
         
   
   
@@ -5334,7 +5248,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/document_scene_information_extraction%28deepseek%29_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/document_scene_information_extraction%28deepseek%29_tutorial.html" class="md-nav__link">
         
   
   
@@ -5357,7 +5271,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/ocr_det_license_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/ocr_det_license_tutorial.html" class="md-nav__link">
         
   
   
@@ -5380,7 +5294,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/ocr_rec_chinese_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/ocr_rec_chinese_tutorial.html" class="md-nav__link">
         
   
   
@@ -5403,7 +5317,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/formula_recognition_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/formula_recognition_tutorial.html" class="md-nav__link">
         
   
   
@@ -5426,7 +5340,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/layout_detection.html" class="md-nav__link">
+      <a href="practical_tutorials/layout_detection.html" class="md-nav__link">
         
   
   
@@ -5449,7 +5363,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/face_recognition_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/face_recognition_tutorial.html" class="md-nav__link">
         
   
   
@@ -5472,7 +5386,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/image_classification_garbage_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/image_classification_garbage_tutorial.html" class="md-nav__link">
         
   
   
@@ -5495,7 +5409,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/instance_segmentation_remote_sensing_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/instance_segmentation_remote_sensing_tutorial.html" class="md-nav__link">
         
   
   
@@ -5518,7 +5432,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/object_detection_fall_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/object_detection_fall_tutorial.html" class="md-nav__link">
         
   
   
@@ -5541,7 +5455,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/object_detection_fashion_pedia_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/object_detection_fashion_pedia_tutorial.html" class="md-nav__link">
         
   
   
@@ -5564,7 +5478,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/ocr_det_license_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/ocr_det_license_tutorial.html" class="md-nav__link">
         
   
   
@@ -5587,7 +5501,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/semantic_segmentation_road_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/semantic_segmentation_road_tutorial.html" class="md-nav__link">
         
   
   
@@ -5610,7 +5524,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/ts_anomaly_detection.html" class="md-nav__link">
+      <a href="practical_tutorials/ts_anomaly_detection.html" class="md-nav__link">
         
   
   
@@ -5633,7 +5547,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/ts_classification.html" class="md-nav__link">
+      <a href="practical_tutorials/ts_classification.html" class="md-nav__link">
         
   
   
@@ -5656,7 +5570,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/ts_forecast.html" class="md-nav__link">
+      <a href="practical_tutorials/ts_forecast.html" class="md-nav__link">
         
   
   
@@ -5679,7 +5593,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../practical_tutorials/deployment_tutorial.html" class="md-nav__link">
+      <a href="practical_tutorials/deployment_tutorial.html" class="md-nav__link">
         
   
   
@@ -5706,10 +5620,319 @@ You're not viewing the latest version.
       
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    VisualDL
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="VisualDL.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    VisualDL
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-visualdl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to VisualDL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Highlights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-guideline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Guideline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Guideline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-launch-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Launch Panel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Launch Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-launch-by-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Launch by Command Line
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-launch-in-python-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Launch in Python Script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function Preview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Function Preview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-scalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Scalar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Scalar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-dynamic-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Dynamic Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-comparison-of-multiple-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Comparison of Multiple Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Audio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Histogram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-high-dimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. High Dimensional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-hyper-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Hyper Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-performance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Performance Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-x2paddle" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. X2Paddle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-fastdeployserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. FastDeployServer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-fastdeployclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. FastDeployClient
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-vdlservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. VDL.service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../FAQ.html" class="md-nav__link">
+      <a href="FAQ.html" class="md-nav__link">
         
   
   
@@ -5731,7 +5954,7 @@ You're not viewing the latest version.
   
   
     <li class="md-nav__item">
-      <a href="../CHANGELOG.html" class="md-nav__link">
+      <a href="CHANGELOG.html" class="md-nav__link">
         
   
   
@@ -5763,8 +5986,6 @@ You're not viewing the latest version.
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -5773,37 +5994,83 @@ You're not viewing the latest version.
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation-process-and-usage" class="md-nav__link">
+  <a href="#introduction-to-visualdl" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation Process and Usage
+      Introduction to VisualDL
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Installation Process and Usage">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-highlights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Highlights
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage-guideline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Guideline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage Guideline">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#environment-preparation" class="md-nav__link">
+  <a href="#1-log" class="md-nav__link">
     <span class="md-ellipsis">
-      Environment Preparation
+      1. Log
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#material-preparation" class="md-nav__link">
+  <a href="#2-launch-panel" class="md-nav__link">
     <span class="md-ellipsis">
-      Material Preparation
+      2. Launch Panel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Launch Panel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-launch-by-command-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Launch by Command Line
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#deployment-steps" class="md-nav__link">
+  <a href="#b-launch-in-python-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Deployment Steps
+      b. Launch in Python Script
     </span>
   </a>
   
@@ -5813,22 +6080,165 @@ You're not viewing the latest version.
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#reference-materials" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reference Materials
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#feedback-section" class="md-nav__link">
+  <a href="#function-preview" class="md-nav__link">
     <span class="md-ellipsis">
-      Feedback Section
+      Function Preview
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Function Preview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-scalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Scalar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Scalar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-dynamic-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      a. Dynamic Display
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-comparison-of-multiple-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      b. Comparison of Multiple Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Image
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Audio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Histogram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-high-dimensional" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. High Dimensional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-hyper-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Hyper Parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-performance-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Performance Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-x2paddle" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. X2Paddle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-fastdeployserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. FastDeployServer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-fastdeployclient" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. FastDeployClient
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-vdlservice" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. VDL.service
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5848,7 +6258,7 @@ You're not viewing the latest version.
 
 
   
-    <a href="https://github.com/PaddlePaddle/PaddleX/edit/develop/docs/pipeline_deploy/edge_deploy.en.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/PaddlePaddle/PaddleX/edit/develop/docs/VisualDL.en.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -5857,311 +6267,371 @@ You're not viewing the latest version.
     
       
     
-    <a href="https://github.com/PaddlePaddle/PaddleX/raw/develop/docs/pipeline_deploy/edge_deploy.en.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/PaddlePaddle/PaddleX/raw/develop/docs/VisualDL.en.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
   
 
 
-<h1 id="paddlex-edge-deployment-demo-usage-guide">PaddleX Edge Deployment Demo Usage Guide<a class="headerlink" href="#paddlex-edge-deployment-demo-usage-guide" title="Permanent link">&para;</a></h1>
-<ul>
-<li><a href="#paddlex-edge-deployment-demo-usage-guide">PaddleX Edge Deployment Demo Usage Guide</a></li>
-<li><a href="#installation-process-and-usage">Installation Process and Usage</a><ul>
-<li><a href="#environment-preparation">Environment Preparation</a></li>
-<li><a href="#material-preparation">Material Preparation</a></li>
-<li><a href="#deployment-steps">Deployment Steps</a></li>
-</ul>
-</li>
-<li><a href="#reference-materials">Reference Materials</a></li>
-<li><a href="#feedback-section">Feedback Section</a></li>
-</ul>
-<p>This guide mainly introduces the operation method of the PaddleX edge deployment demo on the Android shell.
-This guide applies to 8 models across 6 modules:</p>
-<table>
-  <tr>
-    <th>Module</th>
-    <th>Specific Model</th>
-    <th>CPU</th>
-    <th>GPU</th>
-  </tr>
-  <tr>
-    <td rowspan="2">Object Detection</td>
-    <td>PicoDet-S</td>
-    <td>✅</td>
-    <td>✅</td>
-  </tr>
-  <tr>
-    <td>PicoDet-L</td>
-    <td>✅</td>
-    <td>✅</td>
-  </tr>
-  <tr>
-    <td>Layout Area Detection</td>
-    <td>PicoDet_layout_1x</td>
-    <td>✅</td>
-    <td>✅</td>
-  </tr>
-  <tr>
-    <td>Semantic Segmentation</td>
-    <td>PP-LiteSeg-T</td>
-    <td>✅</td>
-    <td>✅</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Image Classification</td>
-    <td>PP-LCNet_x1_0</td>
-    <td>✅</td>
-    <td>✅</td>
-  </tr>
-  <tr>
-    <td>MobileNetV3_small_x1_0</td>
-    <td>✅</td>
-    <td>✅</td>
-  </tr>
-  <tr>
-    <td>Text Detection</td>
-    <td>PP-OCRv4_mobile_det</td>
-    <td>✅</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Text Recognition</td>
-    <td>PP-OCRv4_mobile_rec</td>
-    <td>✅</td>
-    <td></td>
-  </tr>
-</table>
+  <h1>VisualDL</h1>
 
-<p><b>Note</b>
-- <code>GPU</code> refers to <a href="https://www.paddlepaddle.org.cn/lite/develop/demo_guides/opencl.html">mapping computations to GPU execution using OpenCL</a> to fully utilize GPU hardware computing power and improve inference performance.</p>
-<h2 id="installation-process-and-usage">Installation Process and Usage<a class="headerlink" href="#installation-process-and-usage" title="Permanent link">&para;</a></h2>
-<h3 id="environment-preparation">Environment Preparation<a class="headerlink" href="#environment-preparation" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Install CMake build tool locally and download the required version of NDK software package from the <a href="https://developer.android.google.cn/ndk/downloads?hl=en">Android NDK official website</a>. For example, if developing on a Mac, download the NDK software package for the Mac platform from the Android NDK official website.</p>
-<p><b>Environment Requirements</b>
-- <code>CMake &gt;= 3.10</code> (Minimum version not verified, recommend 3.20 and above)
-- <code>Android NDK &gt;= r17c</code> (Minimum version not verified, recommend r20b and above)</p>
-<p><b>Tested Environment Used in This Guide</b>:
-- <code>cmake == 3.20.0</code>
-- <code>android-ndk == r20b</code></p>
-</li>
-<li>
-<p>Prepare an Android phone and enable USB debugging mode. Enable method: <code>Phone Settings -&gt; Locate Developer Options -&gt; Turn on Developer Options and USB Debugging Mode</code>.</p>
-</li>
-<li>
-<p>Install ADB tool on your computer for debugging. ADB installation methods:</p>
-<p>3.1. For Mac:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>brew<span class="w"> </span>cask<span class="w"> </span>install<span class="w"> </span>android-platform-tools
-</span></code></pre></div>
-<p>3.2. For Linux:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Debian-based Linux distributions</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>wget<span class="w"> </span>adb
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Red Hat-based Linux distributions</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>adb
-</span></code></pre></div>
-<p>3.3. For Windows:</p>
-<p>Install ADB by downloading the ADB software package from Google's Android platform: <a href="https://developer.android.com/studio?hl=en">Link</a></p>
-<p>Open a terminal, connect your phone to the computer, and enter in the terminal:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span>adb<span class="w"> </span>devices
-</span></code></pre></div>
-<p>If there is an output from the device, it indicates that the installation was successful.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span>List<span class="w"> </span>of<span class="w"> </span>devices<span class="w"> </span>attached
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w"> </span>744be294<span class="w">    </span>device
-</span></code></pre></div>
-</li>
-</ol>
-<h3 id="material-preparation">Material Preparation<a class="headerlink" href="#material-preparation" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Clone the <code>feature/paddle-x</code> branch of the <code>Paddle-Lite-Demo</code> repository into the <code>PaddleX-Lite-Deploy</code> directory.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span>feature/paddle-x<span class="w"> </span>https://github.com/PaddlePaddle/Paddle-Lite-Demo.git<span class="w"> </span>PaddleX-Lite-Deploy
-</span></code></pre></div>
-</li>
-<li>
-<p>Fill out the <b>survey</b> to download the compressed package, place the compressed package in the specified unzip directory, switch to the specified unzip directory, and execute the unzip command.</p>
+<p><a href="VisualDL.html"><strong>中文</strong></a></p>
+<h2 id="introduction-to-visualdl">Introduction to VisualDL<a class="headerlink" href="#introduction-to-visualdl" title="Permanent link">&para;</a></h2>
+<p>VisualDL, a visualization analysis tool of PaddlePaddle, provides a variety of charts to show the trends of parameters, and visualizes model structures, data samples, histograms of tensors, pr curves and high-dimensional data distributions. It enables users to understand the training process and the model structure more clearly and intuitively so as to optimize models efficiently.</p>
+<p>VisualDL provides various visualization functions, including tracking metrics in real-time, visualizing the model structure, displaying the data sample, presenting the changes of distributions of tensors, showing the pr curves, projecting high-dimensional data to a lower dimensional space and more. Additionally, VisualDL provides VDL.service, which enables developers easily to save, track and share visualization results of experiments. For specific guidelines of each function, please refer to  <a href="https://www.paddlepaddle.org.cn/documentation/docs/en/2.2/guides/03_VisualDL/visualdl_usage_en.html"><strong>VisualDL User Guide</strong></a>. Currently, VisualDL iterates rapidly and new functions will be continously added.</p>
+<p>VisualDL natively supports the use of Python. Developers can retrieve plentiful visualization results by simply adding a few lines of Python code into the model before training.</p>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://paddle.wjx.cn/vm/OjV8gAb.aspx#">Object Detection Survey</a></li>
-<li><a href="https://paddle.wjx.cn/vm/Q2F1L37.aspx#">Semantic Segmentation Survey</a></li>
-<li><a href="https://paddle.wjx.cn/vm/rWPncBm.aspx#">Image Classification Survey</a></li>
-<li><a href="https://paddle.wjx.cn/vm/eaaBo0H.aspx#">OCR Survey</a></li>
+<li><a href="#Key-Highlights">Key Highlights</a></li>
+<li><a href="#Installation">Installation</a></li>
+<li><a href="#Usage-Guideline">Usage Guideline</a></li>
+<li><a href="#Function-Preview">Function Preview</a></li>
+<li><a href="#Contribution">Contribution</a></li>
+<li><a href="#More-Details">More Details</a></li>
+<li><a href="#Technical-Communication">Technical Communication</a></li>
 </ul>
-<p>Below is an example of the unzip operation for object_detection. Refer to the table below for other pipelines.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># 1. Switch to the specified unzip directory</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>PaddleX-Lite-Deploy/object_detection/android/shell/cxx/picodet_detection
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># 2. Execute the unzip command</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>unzip<span class="w"> </span>object_detection.zip
+<h2 id="key-highlights">Key Highlights<a class="headerlink" href="#key-highlights" title="Permanent link">&para;</a></h2>
+<p><strong>Easy to Use</strong></p>
+<p>The high-level design of API makes it easy to use. Only one click can initiate the visualization of model structures.</p>
+<p><strong>Various Functions</strong></p>
+<p>The function contains the visualization of training parameters, data samples, graph structures, histograms of tensors, PR curves and high-dimensional data.</p>
+<p><strong>High Compatibility</strong></p>
+<p>VisualDL provides the visualization of the mainstream model structures such as Paddle, ONNX, Caffe, widely supporting visual analysis for diverse users.</p>
+<p><strong>Fully Support</strong></p>
+<p>By Integrating into PaddlePaddle and related modules, VisualDL allows developers to use different components unobstructed, and thus have the best experience in the PaddlePaddle ecosystem.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>It is recommended to use <strong>pip installation</strong>, which is simple and convenient. Just enter the following command in the terminal:</p>
+<p><div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>visualdl<span class="w"> </span>-i<span class="w"> </span>https://mirror.baidu.com/pypi/simple
 </span></code></pre></div>
-<p><table>
-    <tr>
-      <th>Pipeline Name</th>
-      <th>Unzip Directory</th>
-      <th>Unzip Command</th>
-    </tr>
-    <tr>
-      <td>Object Detection</td>
-      <td>PaddleX-Lite-Deploy/object_detection/android/shell/cxx/picodet_detection</td>
-      <td>unzip object_detection.zip</td>
-    </tr>
-    <tr>
-      <td>Semantic Segmentation</td>
-      <td>PaddleX-Lite-Deploy/semantic_segmentation/android/shell/cxx/semantic_segmentation</td>
-      <td>unzip semantic_segmentation.zip</td>
-    </tr>
-    <tr>
-      <td>Image Classification</td>
-      <td>PaddleX-Lite-Deploy/image_classification/android/shell/cxx/image_classification</td>
-      <td>unzip image_classification.zip</td>
-    </tr>
-    <tr>
-      <td>OCR</td>
-      <td>PaddleX-Lite-Deploy/ocr/android/shell/ppocr_demo</td>
-      <td>unzip ocr.zip</td>
-    </tr>
-  </table></p>
-</li>
-</ol>
-<h3 id="deployment-steps">Deployment Steps<a class="headerlink" href="#deployment-steps" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p>Switch the working directory to <code>PaddleX_Lite_Deploy/libs</code> and run the <code>download.sh</code> script to download the necessary Paddle Lite prediction library. This step only needs to be executed once to support each demo.</p>
-</li>
-<li>
-<p>Switch the working directory to <code>PaddleX_Lite_Deploy/{Task_Name}/assets</code>, run the <code>download.sh</code> script to download the <a href="https://www.paddlepaddle.org.cn/lite/v2.10/user_guides/model_optimize_tool.html">paddle_lite_opt tool</a> optimized model, test images, label files, etc.</p>
-</li>
-<li>
-<p>Switch the working directory to <code>PaddleX_Lite_Deploy/{Task_Name}/android/shell/cxx/{Demo_Name}</code>, run the <code>build.sh</code> script to complete the compilation and execution of the executable file.</p>
-</li>
-<li>
-<p>Switch the working directory to <code>PaddleX-Lite-Deploy/{Task_Name}/android/shell/cxx/{Demo_Name}</code>, run the <code>run.sh</code> script to complete the prediction on the edge.</p>
-<p><b>Note</b>:
-- <code>{Pipeline_Name}</code> and <code>{Demo_Name}</code> are placeholders. Refer to the table at the end of this section for specific values.
-- <code>download.sh</code> and <code>run.sh</code> support passing in model names to specify models. If not specified, the default model will be used. Refer to the <code>Model_Name</code> column in the table at the end of this section for currently supported models.
-- To use your own trained model, refer to the <a href="https://paddlepaddle.github.io/Paddle-Lite/develop/model_optimize_tool/">Model Conversion Method</a> to obtain the <code>.nb</code> model, place it in the <code>PaddleX_Lite_Deploy/{Pipeline_Name}/assets/{Model_Name}</code> directory, where <code>{Model_Name}</code> is the model name, e.g., <code>PaddleX_Lite_Deploy/object_detection/assets/PicoDet-L</code>. Please note that converting static graph models in <code>.json</code> format to <code>.nb</code> format is currently not supported. When exporting a static graph model using PaddleX, please set the environment variable <code>FLAGS_json_format_model</code> to <code>0</code>.
-- Before running the <code>build.sh</code> script, change the path specified by <code>NDK_ROOT</code> to the actual installed NDK path.
-- Keep ADB connected when running the <code>build.sh</code> script.
-- On Windows systems, you can use Git Bash to execute the deployment steps.
-- If compiling on a Windows system, set <code>CMAKE_SYSTEM_NAME</code> to <code>windows</code> in <code>CMakeLists.txt</code>.
-- If compiling on a Mac system, set <code>CMAKE_SYSTEM_NAME</code> to <code>darwin</code> in <code>CMakeLists.txt</code>.</p>
-</li>
-</ol>
-<p>Below is an example for object_detection. For other demos, change the directories switched in steps 2 and 3 according to the table at the end of this section.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># 1. Download the necessary Paddle Lite prediction library</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">cd</span><span class="w"> </span>PaddleX_Lite_Deploy/libs
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>sh<span class="w"> </span>download.sh
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="c1"># 2. Download the paddle_lite_opt tool optimized model, test images, and label files</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nb">cd</span><span class="w"> </span>../object_detection/assets
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>sh<span class="w"> </span>download.sh
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="c1"># Supports passing in model names to specify the downloaded model. Refer to the Model_Name column in the table at the end of this section for supported models.</span>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="c1"># sh download.sh PicoDet-L</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="c1"># 3. Complete the compilation of the executable file</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="nb">cd</span><span class="w"> </span>../android/app/shell/cxx/picodet_detection
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>sh<span class="w"> </span>build.sh
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="c1"># 4. Prediction</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>sh<span class="w"> </span>run.sh
-</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="c1"># Supports passing in model names to specify the prediction model. Refer to the Model_Name column in the table at the end of this section for supported models.</span>
-</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="c1"># sh run.sh PicoDet-L</span>
+If you need to install from source code, you can use the following command to clone the repository and install:</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git clone https://github.com/PaddlePaddle/VisualDL.git
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>cd VisualDL
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>python setup.py bdist_wheel
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>pip install --upgrade dist/visualdl-*.whl
 </span></code></pre></div>
-<p>The run results are shown below, and a result image named <code>dog_picodet_detection_result.jpg</code> is generated:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>======= benchmark summary =======
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>input_shape(s) (NCHW): {1, 3, 320, 320}
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>model_dir:./models/PicoDet-S/model.nb
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>warmup:1
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>repeats:10
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>power_mode:1
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>thread_num:0
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>&lt;b&gt;* time info(ms) &lt;/b&gt;*
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>1st_duration:320.086
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>max_duration:277.331
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>min_duration:272.67
-</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>avg_duration:274.91
-</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
-</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>====== output summary ======
-</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>detection, image size: 768, 576, detect object: bicycle, score: 0.905929, location: x=125, y=1
+Please note that Python 2 is no longer maintained officially since January 1, 2020. VisualDL now only supports Python 3 in order to ensure the usability of codes.</p>
+<h2 id="usage-guideline">Usage Guideline<a class="headerlink" href="#usage-guideline" title="Permanent link">&para;</a></h2>
+<p>VisualDL stores the data, parameters and other information of the training process in a log file. Users can launch the panel to observe the visualization results.</p>
+<h3 id="1-log">1. Log<a class="headerlink" href="#1-log" title="Permanent link">&para;</a></h3>
+<p>The Python SDK is provided at the back end of VisualDL, and a logger can be customized through LogWriter. The interface description is shown as follows:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">LogWriter</span><span class="p">(</span><span class="n">logdir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>                <span class="n">comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                <span class="n">max_queue</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>                <span class="n">flush_secs</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>                <span class="n">filename_suffix</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                <span class="n">write_to_disk</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img src="https://github.com/PaddlePaddle/Paddle-Lite-Demo/blob/feature/paddle-x/docs_img/object_detection/PicoDet-S.jpg?raw=true"></p>
-<p>This section describes the deployment steps applicable to the demos listed in the following table:</p>
+<p><strong>Interface Parameters</strong></p>
 <table>
-  <tr>
-    <th>Pipeline</th>
-    <th>Pipeline_Name</th>
-    <th>Module</th>
-    <th>Demo_Name</th>
-    <th>Specific Model</th>
-    <th>Model_Name</th>
-  </tr>
-  <tr>
-    <td rowspan="3">General Object Detection</td>
-    <td rowspan="3">object_detection</td>
-    <td rowspan="3">Object Detection</td>
-    <td rowspan="3">picodet_detection</td>
-    <td>PicoDet-S</td>
-    <td>PicoDet-S（default）</br>PicoDet-S_gpu</td>
-  </tr>
-  <tr>
-    <td>PicoDet-L</td>
-    <td>PicoDet-L</br>PicoDet-L_gpu</td>
-  </tr>
-  <tr>
-    <td>PicoDet_layout_1x</td>
-    <td>PicoDet_layout_1x</br>PicoDet_layout_1x_gpu</td>
-  </tr>
-  <tr>
-    <td>General Semantic Segmentation</td>
-    <td>semantic_segmentation</td>
-    <td>Semantic Segmentation</td>
-    <td>semantic_segmentation</td>
-    <td>PP-LiteSeg-T</td>
-    <td>PP-LiteSeg-T（default）</br>PP-LiteSeg-T_gpu</td>
-  </tr>
-  <tr>
-    <td rowspan="2">General Image Classification</td>
-    <td rowspan="2">image_classification</td>
-    <td rowspan="2">Image Classification</td>
-    <td rowspan="2">image_classification</td>
-    <td>PP-LCNet_x1_0</td>
-    <td>PP-LCNet_x1_0（default）</br>PP-LCNet_x1_0_gpu</td>
-  </tr>
-  <tr>
-    <td>MobileNetV3_small_x1_0</td>
-    <td>MobileNetV3_small_x1_0</br>MobileNetV3_small_x1_0_gpu</td>
-  </tr>
-  <tr>
-    <td rowspan="2">General OCR</td>
-    <td rowspan="2">ocr</td>
-    <td>Text Detection</td>
-    <td rowspan="2">ppocr_demo</td>
-    <td>PP-OCRv4_mobile_det</td>
-    <td>PP-OCRv4_mobile_det</td>
-  </tr>
-  <tr>
-    <td>Text Recognition</td>
-    <td>PP-OCRv4_mobile_rec</td>
-    <td>PP-OCRv4_mobile_rec</td>
-  </tr>
+<thead>
+<tr>
+<th>parameters</th>
+<th>type</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>logdir</td>
+<td>string</td>
+<td>The path location of log file. VisualDL will create a log file under this path to record information generated by the training process. If not specified, the path will be  <code>runs/${CURRENT_TIME}</code>as default.</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>string</td>
+<td>Add a suffix to the log folder name, which is invalid if logdir is already specified.</td>
+</tr>
+<tr>
+<td>max_queue</td>
+<td>int</td>
+<td>The maximum capacity of the data generated before recording in a log file. Default value is 10. If the capacity is reached, the data is immediately written into the log file. The cache is not used if set to 0.</td>
+</tr>
+<tr>
+<td>flush_secs</td>
+<td>int</td>
+<td>The maximum cache time of the data generated before recording in a log file. Default value is 120. When this time is reached, the data is immediately written to the log file. The cache is not used if set to 0.</td>
+</tr>
+<tr>
+<td>filename_suffix</td>
+<td>string</td>
+<td>Add a suffix to the default log file name.</td>
+</tr>
+<tr>
+<td>write_to_disk</td>
+<td>boolean</td>
+<td>Write into disk or not.</td>
+</tr>
+<tr>
+<td>display_name</td>
+<td>string</td>
+<td>Set the name of different runs when <code>logdir</code> is too long or needed to be hidden. If not set, the default name is <code>logdir</code>.</td>
+</tr>
+</tbody>
 </table>
+<p><strong>Example</strong></p>
+<p>Create a log file and record scalar values:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">visualdl</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogWriter</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># create a log file under `./log/scalar_test/train`</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">with</span> <span class="n">LogWriter</span><span class="p">(</span><span class="n">logdir</span><span class="o">=</span><span class="s2">&quot;./log/scalar_test/train&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="c1"># use `add_scalar` to record scalar values</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="s2">&quot;acc&quot;</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.5678</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="s2">&quot;acc&quot;</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.6878</span><span class="p">)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="n">writer</span><span class="o">.</span><span class="n">add_scalar</span><span class="p">(</span><span class="n">tag</span><span class="o">=</span><span class="s2">&quot;acc&quot;</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.9878</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="2-launch-panel">2. Launch Panel<a class="headerlink" href="#2-launch-panel" title="Permanent link">&para;</a></h3>
+<p>In the above example, the log has recorded three sets of scalar values. Develpers can view the visualization results of the log file through launching the visualDL panel. There are two ways to launch a log file:</p>
+<h4 id="a-launch-by-command-line">a. Launch by Command Line<a class="headerlink" href="#a-launch-by-command-line" title="Permanent link">&para;</a></h4>
+<p>Use the command line to launch the VisualDL panel：</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">visualdl</span> <span class="o">--</span><span class="n">logdir</span> <span class="o">&lt;</span><span class="n">dir_1</span><span class="p">,</span> <span class="n">dir_2</span><span class="p">,</span> <span class="o">...</span> <span class="p">,</span> <span class="n">dir_n</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">host</span> <span class="o">&lt;</span><span class="n">host</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">port</span> <span class="o">&lt;</span><span class="n">port</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">cache</span><span class="o">-</span><span class="n">timeout</span> <span class="o">&lt;</span><span class="n">cache_timeout</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">language</span> <span class="o">&lt;</span><span class="n">language</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">public</span><span class="o">-</span><span class="n">path</span> <span class="o">&lt;</span><span class="n">public_path</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">api</span><span class="o">-</span><span class="n">only</span> <span class="o">--</span><span class="n">component_tabs</span> <span class="o">&lt;</span><span class="n">tab_name1</span><span class="p">,</span> <span class="n">tab_name2</span><span class="p">,</span> <span class="o">...&gt;</span>
+</span></code></pre></div>
+<p>Parameter details:</p>
+<table>
+<thead>
+<tr>
+<th>parameters</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--logdir</td>
+<td>Set one or more directories of the log. VisualDL will search the log file recursively under this path to display the all experimental results.</td>
+</tr>
+<tr>
+<td>--host</td>
+<td>Specify IP address. The default value is·<code>127.0.0.1</code>.</td>
+</tr>
+<tr>
+<td>--port</td>
+<td>Set the port. The default value is<code>8040</code>.</td>
+</tr>
+<tr>
+<td>--cache-timeout</td>
+<td>Cache time of the backend. During the cache time, the front end requests the same URL multiple times, and then the returned data is obtained from the cache. The default cache time is 20 seconds.</td>
+</tr>
+<tr>
+<td>--language</td>
+<td>The language of the VisualDL panel. Language can be specified as 'en' or 'zh', and the default is the language used by the browser.</td>
+</tr>
+<tr>
+<td>--public-path</td>
+<td>The URL path of the VisualDL panel. The default path is '/app', meaning that the access address is 'http://&lt;host&gt;:&lt;port&gt;/app'.</td>
+</tr>
+<tr>
+<td>--api-only</td>
+<td>Decide whether or not to provide only API. If this parameter is set, VisualDL will only provides API service without displaying the web page, and the API address is 'http://&lt;host&gt;:&lt;port&gt;/&lt;public_path&gt;/api'. Additionally, If the public_path parameter is not specified, the default address is 'http://&lt;host&gt;:&lt;port&gt;/api'.</td>
+</tr>
+<tr>
+<td>--component_tabs</td>
+<td>Decide which components are presented in page, currently support 15 components, i.e. <code>scalar</code>, <code>image</code>, <code>text</code>, <code>embeddings</code>, <code>audio</code>, <code>histogram</code>, <code>hyper_parameters</code>, <code>static_graph</code>, <code>dynamic_graph</code>, <code>pr_curve</code>, <code>roc_curve</code>, <code>profiler</code>, <code>x2paddle</code>, <code>fastdeploy_server</code>, <code>fastdeploy_client</code>. If this parameter is set, only specified components will be presented. If not set, and specify <code>--logdir</code> parameter, only components with data in vdlrecords log are presented. If both <code>--component_tabs</code> and <code>--logdir</code> are not set, only present <code>static_graph</code>, <code>x2paddle</code>, <code>fastdeploy_server</code>, <code>fastdeploy_client</code> components by default.</td>
+</tr>
+</tbody>
+</table>
+<p>To visualize the log file generated in the previous step, developers can launch the panel through the command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>visualdl --logdir ./log
+</span></code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>visualdl --logdir ./log --port 8089
+</span></code></pre></div>
+<p>Open your browser and enter: <code>localhost:8089</code> to view the VisualDL dashboard.</p>
+<h4 id="b-launch-in-python-script">b. Launch in Python Script<a class="headerlink" href="#b-launch-in-python-script" title="Permanent link">&para;</a></h4>
+<p>Developers can start the VisualDL panel in Python script as follows:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">visualdl</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">logdir</span><span class="p">,</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>                        <span class="n">host</span><span class="o">=</span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>                        <span class="n">port</span><span class="o">=</span><span class="mi">8080</span><span class="p">,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>                        <span class="n">cache_timeout</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>                        <span class="n">language</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>                        <span class="n">public_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>                        <span class="n">api_only</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>                        <span class="n">open_browser</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Please note: since all parameters are indefinite except <code>logdir</code>, developers should specify parameter names when using them.</p>
+<p>The interface parameters are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>parameters</th>
+<th>type</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>logdir</td>
+<td>string or list[string_1, string_2, ... , string_n]</td>
+<td>Set one or more directories of the log. VisualDL will search the log file recursively under this path to display the all experimental results.</td>
+</tr>
+<tr>
+<td>host</td>
+<td>string</td>
+<td>Specify IP address. The default value is·<code>127.0.0.1</code>.</td>
+</tr>
+<tr>
+<td>port</td>
+<td>int</td>
+<td>Set the port. The default value is<code>8040</code>.</td>
+</tr>
+<tr>
+<td>cache_timeout</td>
+<td>int</td>
+<td>Cache time of the backend. During the cache time, the front end requests the same URL multiple times, and then the returned data is obtained from the cache. The default cache time is 20 seconds.</td>
+</tr>
+<tr>
+<td>language</td>
+<td>string</td>
+<td>The language of the VisualDL panel. Language can be specified as 'en' or 'zh', and the default is the language used by the browser.</td>
+</tr>
+<tr>
+<td>public_path</td>
+<td>string</td>
+<td>The URL path of the VisualDL panel. The default path is '/app', meaning that the access address is 'http://&lt;host&gt;:&lt;port&gt;/app'.</td>
+</tr>
+<tr>
+<td>api_only</td>
+<td>boolean</td>
+<td>Decide whether or not to provide only API. If this parameter is set, VisualDL will only provides API service without displaying the web page, and the API address is 'http://&lt;host&gt;:&lt;port&gt;/&lt;public_path&gt;/api'. Additionally, If the parameter public_path is not specified, the default address is 'http://&lt;host&gt;:&lt;port&gt;/api'.</td>
+</tr>
+<tr>
+<td>open_browser</td>
+<td>boolean</td>
+<td>Whether or not to open the browser. If this parameter is set as True, the browser will be openned automatically and VisualDL panel will be launched at the same time. If parameter api_only is specified as True,  parameter open_browser can be ignored.</td>
+</tr>
+<tr>
+<td>component_tabs</td>
+<td>string or list[string_1, string_2, ... , string_n]</td>
+<td>Decide which components are presented in page, currently support 15 components, i.e. <code>scalar</code>, <code>image</code>, <code>text</code>, <code>embeddings</code>, <code>audio</code>, <code>histogram</code>, <code>hyper_parameters</code>, <code>static_graph</code>, <code>dynamic_graph</code>, <code>pr_curve</code>, <code>roc_curve</code>, <code>profiler</code>, <code>x2paddle</code>, <code>fastdeploy_server</code>, <code>fastdeploy_client</code>. If this parameter is set, only specified components will be presented. If not set, and specify <code>--logdir</code> parameter, only components with data in vdlrecords log are presented. If both <code>--component_tabs</code> and <code>--logdir</code> are not set, only present <code>static_graph</code>, <code>x2paddle</code>, <code>fastdeploy_server</code>, <code>fastdeploy_client</code> components by default.</td>
+</tr>
+</tbody>
+</table>
+<p>To visualize the log file generated in the previous step, developers can launch the panel through the command:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">visualdl.server</span><span class="w"> </span><span class="kn">import</span> <span class="n">app</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">logdir</span><span class="o">=</span><span class="s2">&quot;./log&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p>After launching the panel by one of the above methods, developers can see the visualization results on the browser shown as blow:</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48054808/90868674-ba321f00-e3c9-11ea-83c1-f03c6dd19187.png" width="70%"/>
+</p>
 
-<p><b>Note</b></p>
+<h2 id="function-preview">Function Preview<a class="headerlink" href="#function-preview" title="Permanent link">&para;</a></h2>
+<h3 id="1-scalar">1. Scalar<a class="headerlink" href="#1-scalar" title="Permanent link">&para;</a></h3>
+<p><strong>Scalar</strong> makes use of various charts to display how the parameters, such as accuracy, loss and learning rate, change during the training process. In this case, developers can observe not only the single but also the multiple groups of parameters in order to understand the training process and thus speed up the process of model tuning.</p>
+<h4 id="a-dynamic-display">a. Dynamic Display<a class="headerlink" href="#a-dynamic-display" title="Permanent link">&para;</a></h4>
+<p>After the launchment of VisualDL Board, the LogReader will continuously record the data to display in the front-end. Hence, the changes of parameters can be visualized in real-time, as shown below:</p>
+<p align="center">
+  <img src="https://visualdl.bj.bcebos.com/images/dynamic_display.gif" width="60%"/>
+</p>
+
+<h4 id="b-comparison-of-multiple-experiments">b. Comparison of Multiple Experiments<a class="headerlink" href="#b-comparison-of-multiple-experiments" title="Permanent link">&para;</a></h4>
+<p>Developers can compare with multiple experiments by specifying and uploading the path of each experiment at the same time so as to visualize the same parameters in the same chart.</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/48054808/90869567-fdd95880-e3ca-11ea-9855-6c97ad5c8ae7.gif" width="100%"/>
+</p>
+
+<h3 id="2-image">2. Image<a class="headerlink" href="#2-image" title="Permanent link">&para;</a></h3>
+<p><strong>Image</strong> provides real-time visualizations of the image data during the training process, allowing developers to observe the changes of images in different training stages and  to deeply understand the effects of the training process.</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/48054808/90869677-22353500-e3cb-11ea-9830-2334bdd8e52e.gif" width="60%"/>
+</p>
+
+<h3 id="3-audio">3. Audio<a class="headerlink" href="#3-audio" title="Permanent link">&para;</a></h3>
+<p><strong>Audio</strong> aims to allow developers to listen to the audio data in real-time during the training process, helping developers to monitor the process of speech recognition and text-to-speech.</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/48054808/90869771-47c23e80-e3cb-11ea-8b2a-a38b6c33d64b.png" width="85%"/>
+</p>
+
+<h3 id="4-text">4. Text<a class="headerlink" href="#4-text" title="Permanent link">&para;</a></h3>
+<p><strong>Text</strong> visualizes the text output of NLP models within any stage, aiding developers to compare the changes of outputs so as to deeply understand the training process and simply evaluate the performance of the model.</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/28444161/106248340-cdd09400-624b-11eb-8ea9-5a07a239c365.png" width="85%"/>
+</p>
+
+<h3 id="5-graph">5. Graph<a class="headerlink" href="#5-graph" title="Permanent link">&para;</a></h3>
+<p><strong>Graph</strong> enables developers to visualize model structures by only one click. Moreover, <strong>Graph</strong> allows developers to explore model attributes, node information, node input and output. aiding them analyze model structures quickly and understand the direction of data flow easily. Additionally, Graph supports the visualization of dynamic and static model graph respectively.</p>
 <ul>
-<li>Currently, there is no demo for deploying the Layout Area Detection module on the edge, so the <code>picodet_detection</code> demo is reused to deploy the <code>PicoDet_layout_1x</code> model.</li>
+<li>dynamic graph</li>
 </ul>
-<h2 id="reference-materials">Reference Materials<a class="headerlink" href="#reference-materials" title="Permanent link">&para;</a></h2>
-<p>This guide only introduces the basic installation and usage process of the edge deployment demo. If you want to learn more detailed information, such as code introduction, code explanation, updating models, updating input and output preprocessing, updating prediction libraries, etc., please refer to the following documents:</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/22424850/175811841-64b44d99-7d48-4fe9-a679-01156d15af74.gif" width="85%"/>
+</p>
+
 <ul>
-<li><a href="https://github.com/PaddlePaddle/Paddle-Lite-Demo/tree/feature/paddle-x/object_detection/android/shell/cxx/picodet_detection">Object Detection</a></li>
-<li><a href="https://github.com/PaddlePaddle/Paddle-Lite-Demo/blob/feature/paddle-x/semantic_segmentation/android/shell/cxx/semantic_segmentation/README.md">Semantic Segmentation</a></li>
-<li><a href="https://github.com/PaddlePaddle/Paddle-Lite-Demo/blob/feature/paddle-x/image_classification/android/shell/cxx/image_classification/README.md">Image Classification</a></li>
-<li><a href="https://github.com/PaddlePaddle/Paddle-Lite-Demo/blob/feature/paddle-x/ocr/android/shell/ppocr_demo/README.md">OCR</a></li>
+<li>static graph</li>
 </ul>
-<h2 id="feedback-section">Feedback Section<a class="headerlink" href="#feedback-section" title="Permanent link">&para;</a></h2>
-<p>The edge deployment capabilities are continuously optimized. Welcome to submit <a href="https://github.com/PaddlePaddle/PaddleX/issues/new/choose">issue</a> to report problems and needs, and we will follow up promptly.</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/22424850/175811795-1fd21737-06f0-42fc-bea3-ef7a17216fc9.gif" width="85%"/>
+</p>
+
+<h3 id="6-histogram">6. Histogram<a class="headerlink" href="#6-histogram" title="Permanent link">&para;</a></h3>
+<p><strong>Histogram</strong> displays how the trend of tensors (weight, bias, gradient, etc.) changes during the training process in the form of histogram. Developers can adjust the model structures accurately by having an in-depth understanding of the effect of each layer.</p>
+<ul>
+<li>Offset Mode</li>
+</ul>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/48054808/90870121-bd2e0f00-e3cb-11ea-89cf-6622cb607b89.png" width="85%"/>
+</p>
+
+<ul>
+<li>Overlay Mode</li>
+</ul>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/48054808/90870194-cfa84880-e3cb-11ea-8a66-bebcad267a10.png" width="85%"/>
+</p>
+
+<h3 id="7-high-dimensional">7. High Dimensional<a class="headerlink" href="#7-high-dimensional" title="Permanent link">&para;</a></h3>
+<p><strong>High Dimensional</strong> provides two approaches--T-SNE and PCA--to do the dimensionality reduction, allowing developers to have an in-depth analysis of the relationship between high-dimensional data and to optimize algorithms based on the analysis.</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/48054808/103188111-1b32ac00-4902-11eb-914e-c2368bdb8373.gif" width="85%"/>
+</p>
+
+<h3 id="8-hyper-parameters">8. Hyper Parameters<a class="headerlink" href="#8-hyper-parameters" title="Permanent link">&para;</a></h3>
+<p><strong>Hyper Parameters</strong> visualize the relationship between hyperparameters and model metrics (such as accuracy and loss) in a rich view, helping you identify the best hyperparameters in an efficient way.</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/28444161/119247155-e9c0c280-bbb9-11eb-8175-58a9c7657a9c.gif" width="85%"/>
+</p>
+
+<h3 id="9-performance-analysis">9. Performance Analysis<a class="headerlink" href="#9-performance-analysis" title="Permanent link">&para;</a></h3>
+<p><strong>Performance Analysis</strong>(Profiler) visualize the profiling data collected during your program runs, helping you identify program bottlenecks and optimize performance. Please refer to <a href="https://github.com/PaddlePaddle/VisualDL/blob/develop/docs/components/profiler/README.md">VisualDL Profiler Guide</a>.</p>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/22424850/185894151-53ffc60b-7203-4cb8-a289-5d97332d0691.gif" width="85%"/>
+</p>
+
+<h3 id="10-x2paddle">10. X2Paddle<a class="headerlink" href="#10-x2paddle" title="Permanent link">&para;</a></h3>
+<p>The X2Paddle component provides the functions of onnx model format visualization and transformation to paddle format.</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22424850/211203066-f2e43ef5-104f-436a-b44c-cad2b37ad518.gif" width="100%"/>
+</p>
+
+<h3 id="11-fastdeployserver">11. FastDeployServer<a class="headerlink" href="#11-fastdeployserver" title="Permanent link">&para;</a></h3>
+<p>The FastDeployServer component provides the functions of loading and editing the model repository, fastdeployserver service management and monitoring, and providing the client to test service. Please refer to <a href="https://github.com/PaddlePaddle/VisualDL/blob/develop/docs/components/fastdeploy_server/README.md">use VisualDL for fastdeploy serving deployment visualization</a>.</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22424850/211196832-1a05bf80-5aaa-493f-bba2-27e819c18bb9.gif" width="100%"/>
+</p>
+
+<h3 id="12-fastdeployclient">12. FastDeployClient<a class="headerlink" href="#12-fastdeployclient" title="Permanent link">&para;</a></h3>
+<p>The FastDeployClient component is mainly used to quickly access the fastdeployserver service, to help users visualize prediction requests and results. Please refer to <a href="https://github.com/PaddlePaddle/VisualDL/blob/develop/docs/components/fastdeploy_client/README.md">use VisualDL as fastdeploy client for request visualization</a>.</p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/22424850/211203852-059d5b98-6299-4057-97d8-5209805aa67f.gif" width="100%"/>
+</p>
+
+<h3 id="13-vdlservice">13. VDL.service<a class="headerlink" href="#13-vdlservice" title="Permanent link">&para;</a></h3>
+<p><strong>VDL.service</strong> enables developers to easily save, track and share visualization results with anyone for free.</p>
+<p align="center">
+<img src=https://user-images.githubusercontent.com/48054808/93731055-fbeafb00-fbfd-11ea-80f4-bbfd08a0fc35.png
+</p>
+
+## Contribution
+
+VisualDL, in which Graph is powered by [Netron](https://github.com/lutzroeder/netron), is an open source project supported by  [PaddlePaddle](https://www.paddlepaddle.org/) and [ECharts](https://echarts.apache.org/) . Developers are warmly welcomed to use, comment and contribute.
+
+
+## More Details
+
+For more details related to the use of VisualDL, please refer to [**VisualDL User Guide**](https://github.com/PaddlePaddle/VisualDL/blob/develop/docs/components/README.md), [**VisualDL Profiler Guide**](https://github.com/PaddlePaddle/VisualDL/blob/develop/docs/components/profiler/README.md), [**Use VisualDL for fastdeploy serving deployment visualization**](https://github.com/PaddlePaddle/VisualDL/blob/develop/docs/components/fastdeploy_server/README.md), [**Use VisualDL as fastdeploy client for request visualization**](https://github.com/PaddlePaddle/VisualDL/blob/develop/docs/components/fastdeploy_client/README.md).
 
 
 
@@ -6184,7 +6654,7 @@ This guide applies to 8 models across 6 modules:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 30, 2025 09:37:06 UTC">May 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 15, 2025 08:34:11 UTC">June 15, 2025</span>
   </span>
 
     
@@ -6194,7 +6664,7 @@ This guide applies to 8 models across 6 modules:</p>
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 30, 2025 09:37:06 UTC">May 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 15, 2025 08:34:11 UTC">June 15, 2025</span>
   </span>
 
     
@@ -6209,7 +6679,7 @@ This guide applies to 8 models across 6 modules:</p>
     </span>
     <nav>
       
-        <a href="mailto:cuicheng_smile@163.com">cuicheng01</a>
+        <a href="mailto:35441050@qq.com">Tingquan Gao</a>
     </nav>
   </span>
 
@@ -6222,60 +6692,6 @@ This guide applies to 8 models across 6 modules:</p>
 
 
 
-
-<h2 id="__comments">Comments</h2>
-<!-- Insert generated snippet here -->
-
-<script src="https://giscus.app/client.js"
-        data-repo="PaddlePaddle/PaddleX"
-        data-repo-id="MDEwOlJlcG9zaXRvcnkyNDY1MDkwNzM="
-        data-category="General"
-        data-category-id="DIC_kwDODrFuEc4ChKVF"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
-<!-- Synchronize Giscus theme with palette -->
-<script>
-    var giscus = document.querySelector("script[src*=giscus]")
-
-    // Set palette on initial load
-    var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate"
-            ? "transparent_dark"
-            : "light"
-
-        // Instruct Giscus to set theme
-        giscus.setAttribute("data-theme", theme)
-    }
-
-    // Register event handlers after documented loaded
-    document.addEventListener("DOMContentLoaded", function () {
-        var ref = document.querySelector("[data-md-component=palette]")
-        ref.addEventListener("change", function () {
-            var palette = __md_get("__palette")
-            if (palette && typeof palette.color === "object") {
-                var theme = palette.color.scheme === "slate"
-                    ? "transparent_dark"
-                    : "light"
-
-                // Instruct Giscus to change theme
-                var frame = document.querySelector(".giscus-frame")
-                frame.contentWindow.postMessage(
-                    { giscus: { setConfig: { theme } } },
-                    "https://giscus.app"
-                )
-            }
-        })
-    })
-</script>
 
                 
               </article>
@@ -6300,7 +6716,7 @@ This guide applies to 8 models across 6 modules:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="serving.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Serving">
+          <a href="practical_tutorials/deployment_tutorial.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 产线部署实践教程">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -6310,20 +6726,20 @@ This guide applies to 8 models across 6 modules:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Serving
+                产线部署实践教程
               </div>
             </div>
           </a>
         
         
           
-          <a href="paddle2onnx.html" class="md-footer__link md-footer__link--next" aria-label="Next: 获取 ONNX 模型">
+          <a href="FAQ.html" class="md-footer__link md-footer__link--next" aria-label="Next: FAQ">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                获取 ONNX 模型
+                FAQ
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -6374,12 +6790,12 @@ This guide applies to 8 models across 6 modules:</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.expand", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "navigation.expand", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../../javascripts/katex.min.js"></script>
+        <script src="../javascripts/katex.min.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
